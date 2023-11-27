@@ -2,7 +2,9 @@
 For CV Workshop
 
 Day 1 :
+
 Session 1:
+
     Command Line Interfaces :
         Listing all files in a directory : ls
         Making a directory : mkdir <mkdir> <dir_name>
@@ -17,4 +19,11 @@ Session 1:
     /root is the parent directory
 
     Python :
-        Open Basic Directory
+        Open Basic > test.py
+
+Session 2:
+
+    NumPy:
+        Usage of NumPy as a library for scientific calculations and higher dimensional matrices.
+        For installation: pip install numpy
+        Open Basic > npbase.py
