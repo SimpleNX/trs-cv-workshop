@@ -27,3 +27,17 @@ Session 2:
         Usage of NumPy as a library for scientific calculations and higher dimensional matrices.
         For installation: pip install numpy
         Open Basic > npbase.py
+
+Day 2:
+Session 1:
+    Digital Images:
+        Images are collection of pixels and pixels are a point on the image which can have some properties.
+        They are different types of images.
+        Storing Digital Images : 8 bit color format and 16 bit color format.
+        Different Color Channels : 
+            BGR (0-255)
+            HSV 
+            CYMK
+    OpenCV:
+        Installation : pip install opencv-python
+
