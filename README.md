@@ -29,6 +29,8 @@ Session 2:
         Open Basic > npbase.py
 
 Day 2:
+
+
 Session 1:
     Digital Images:
         Images are collection of pixels and pixels are a point on the image which can have some properties.
@@ -40,4 +42,11 @@ Session 1:
             CYMK
     OpenCV:
         Installation : pip install opencv-python
+        Open cvproj > cvtry.py
+
+Session 2:
+    Using NumPy and OpenCV:
+        NumPy to make digital images.
+        Open CV to animate by constant frames.
+        Open cvproj > npb.py
 
