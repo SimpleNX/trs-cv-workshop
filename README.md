@@ -111,3 +111,21 @@ Session 1:
         =>Gy : (Gx)T
         Open cvproj > edgedetection.py
         
+
+Session 2:
+
+    Hough Transforms:
+        It is used to detect what the set of points that make up the edge make
+        It uses a specific parameter which matches the specific image dataset.
+        In this, we pick all the points along the edge or required surface and plot it in the Hough Space.
+        There can be multiple interesection points where points don't come in a line,
+        we approximate the region with the most intersections by diving the axes into grids(regions) and voting for the region with the most intersections.
+        The Algorithm for Hough Transform:
+            Line :
+
+            Circle :
+                The parameters, x,y, centre coordinates, theta
+                In 3D plane, we get a cone as if a point is taken on the circumference of the circle, with increasing radius it forms a cone with axis along the radius axis.
+                If we find a point on the circumference and find the gradient at the point we restrict the centre of the original circle as the circle will stay on the normal at the point extended infinitely.
+                And then again by voting we find the region of the centre.    
+        
