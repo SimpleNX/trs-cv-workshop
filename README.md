@@ -32,6 +32,7 @@ Day 2:
 
 
 Session 1:
+
     Digital Images:
         Images are collection of pixels and pixels are a point on the image which can have some properties.
         They are different types of images.
@@ -42,11 +43,71 @@ Session 1:
             CYMK
     OpenCV:
         Installation : pip install opencv-python
+        Arithmetic Operations on image and bitwise operations on image
         Open cvproj > cvtry.py
 
 Session 2:
+
     Using NumPy and OpenCV:
-        NumPy to make digital images.
+        NumPy to make digital images, by use of numpy arrays to create frames.
+        Using the frame as the image to perform image functions from OpenCV
         Open CV to animate by constant frames.
         Open cvproj > npb.py
+        Open cvproj > pacman.py
+        Open cvproj > loading.py
 
+Day 3:
+
+Session 1:
+
+    Image Smoothing:
+        Filtering and Blurring:
+        Digital Images are 3D array of integers representing pixels of the image with different integers representing different attributes of the image.
+        Images are 3D array of BGR functions
+        Filtering is a process that tranforms the pixels of the input image with respect to a function and outputs a filtered image with the funtion applied.
+        Examples of Filters:
+            1. Moving(weighted) Average: Sets the value of the current pixel as the average of its neighbouring pixel wich blurs/smooths out the sharper edges of the image.
+                 Image Segmentation : This filter is used to segment the image by based on simple threshold image, by setting pixel regions with some high or low values to create bright and dark regions.
+            2. Gaussian Filter:
+                    The gaussian function is used to binarize the nearby points.
+                    It's a bell shaped curve from -infinity to infinity
+            
+        Kernel:
+            Kernel is a matrix of values that specifies the operation to be applied on each pixel of the image. Matrix of weights of the nearby pixels.
+            Weighted.
+            Filters can applied by using Kernel.
+        Convolution:
+            Convolution in Calculus Form.
+            Another way of applying filters.
+            Hospital Patient-Dose Treatment Analysis
+            The filter kernel is flipped in this and then multiplied.
+        Cross-Correlation:
+            Same as Convolution but the filter kernel is not flipped.
+            Can be used to find known features between two images.
+        The images can be crisper and sharper, by smoothing we use weighted average and blur the image edges which reduces the noises in the image.
+        It blurs the image.
+        Open cvproj > smooth.py
+        Open cvproj > Smoothing and Blur
+
+        Edge Detection :
+             We detect images by detecing the rapid change in image color intensity.
+             Plotting the intensity function and then taking its derivative function.
+             The usage of Lagrange's Identity:
+                Backward, Forward, Central derivatives.
+            This derivatives are convoluted kernels.
+            We use the correlated kernels upon the function values.
+            [a,b,c] [x+1,x,x-1] This is convoluted kernel which formed by flipping the above kernel horizontally.
+        
+        Gradient of an image is : (nabla)f
+        The gradient vector points in the direction of change in maximun intensity
+
+        Reducing Noise :
+            Let f be the image and g be the smoohing kernel and calculate the smoothed gradient.
+            d/dx(f*g) *means convolution
+            =>f*(d/dx(g)) As the image f is constant.
+        
+        Sobel Noise Detector :
+        =>Gx:[[1,0,-1],[2,0,-2],[1,0,-1]] #Central Derivatives, convoluted kernels
+        =>Gy : (Gx)T
+        Open cvproj > edgedetection.py
+        
