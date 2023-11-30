@@ -8,22 +8,13 @@ import numpy as np
 
 v1 = cv.VideoCapture("test_video.mp4")
 
-def func(x):
-    pass
-
-cv.namedWindow("trackbar")
-low=cv.createTrackbar("Low", "trackbar", 0, 255, func) 
-high=cv.createTrackbar("High", "trackbar", 0, 255, func)
+#Lane Detection frame by frame.
 
 while True:
-    low = cv.getTrackbarPos("Low", "trackbar")
-    high = cv.getTrackbarPos("High","trackbar")
-
     _,img = v1.read()
     cv.imshow("Original", img)
-    gray_img=cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-    canny = cv.Canny(gray_img, low, high)
-    lines=cv.HoughLinesP(canny,1000,np.pi/180,150,200,100,150)
+    canny = cv.Canny(gray_img, 150, 250)
+    lines=cv.HoughLinesP(canny,1,np.pi/180,150,minLineLength=50,maxLineGap=50)
 
     for i in range(0, len(lines)):
         x1, y1, x2, y2 = lines[i][0]
