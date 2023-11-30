@@ -144,4 +144,21 @@ Session 1:
     Blob Detection :
         Similiar to template detection but here the blob and solid circles are detected using different functions.
 
+Session 2:
+
+    Image Contours:
+        Contours are curves joining all points with same color, intensity, where all the points are continuous.(Along the boundary)
+        These are done in binary image.
+        Open cvproj > Contours
+        Contour Heirarchy:
+            The way shapes/objects are relatively stored with respect to each other.
+            The way how contour image relate to each other.
+        Matching contours :
+            Similiar thing to matching for similiar images, by matching contours as they are curves joining points of similiar values.
+        There are functions to find the features of the contour, area, perimeter etc.
+        Also there is contour approximation.
+
+        For gesture recogniton, look for mediapipe documentation
+            https://github.com/google/mediapipe
+
         
