@@ -128,4 +128,20 @@ Session 2:
                 In 3D plane, we get a cone as if a point is taken on the circumference of the circle, with increasing radius it forms a cone with axis along the radius axis.
                 If we find a point on the circumference and find the gradient at the point we restrict the centre of the original circle as the circle will stay on the normal at the point extended infinitely.
                 And then again by voting we find the region of the centre.    
+            Open cvproj > hough.py
+            The above file contains the lane detection code.
+
+
+Day 4:
+Session 1:
+
+    Template Detection:
+        Matching the template with a target image.
+        Open cvproj > template.py
+        We detected the template in the image where the sqdiff is lowest and the ccorr is highest.
+        For drawing the rectangle, we find the coordinates of the max and min values in the template and image matching region.
+
+    Blob Detection :
+        Similiar to template detection but here the blob and solid circles are detected using different functions.
+
         
