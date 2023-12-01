@@ -161,4 +161,61 @@ Session 2:
         For gesture recogniton, look for mediapipe documentation
             https://github.com/google/mediapipe
 
+
+Day 5:
+
+Session 1:
+
+    Path detection Algorithm:
+        Detecting nodes to determine the shortest path or the available paths or the path problem required.
+
+        Data Structures :
+            Stacks :
+                A basic data strcture which works with the LIFO method.
+                Similiar to how you would access a stack of books.
+                Push and Pop are common functions here.
+                Basically one window for pushing and poppping data
+            Queue :
+                Works with FIFO method.
+                Analogous to real life queues.
+                Analogous to stack,
+                    enqueue and dequeue are common functions here.
+                Here there is one window for accessing data and one window for pushing data.
+            Linked List :
+                Discrete nodes linked to each other.
+            Graphs :
+                Look for Graph data structure Documentation
+                Set of vertices or nodes are joined to form edges and formed an graph, sort of mapping an area by joining the nodes or vertices.
+                They can also contain functions on the link or edge joining the vertices, by which the requirements of the problem can be met, or be checked.
+                Trees :
+                    Look for Tree Data Structure.
+                Graphs are represented using :
+                    Adjacency Matrix : A n*n matrix which contains 0 or 1 where 1 for a (i,j)
+                    would mean that there exists a edge between ith and jth nodes.
+                    Adjacency List: A list which has all the edges that a singular node has.
+                    Basically all the edge connections a node has.
+
+                Graph Traversal Methods:
+                    Bread First Search:
+                        We traverse from the root and move to its child and then to the child and then after them their child and so on.
+                        Searching and moving generation-wise.
+                        The search used by BFS is same as implementing the queue data structure.(FIFO)
+                        Breadth-wise :
+                            Checking data at the same breadth.
+                            All of them store breadth wise in the queue.
+                            The nodes with same distance from the root are checked first and then to the next set of nodes with increasing distance from the root.
+                    Depth-First Search:
+                        Here we start with one vertex and go to as much depth we can go from that vertex.
+                        The one down of using this algorithm is that it can only explore nodes that be explored from the source node.
+                        The above can be bypassed or solved by using a main loop that loops through all the nodes and consider them as the source node and then checks all the visited nodes and accessed nodes and then the algorithm proceeds with the search.
+                        Its the implementation of stack data structure.
+                        
+                Open Path-Detection-Algorithm
+
+             
+
+                
+
+
+
         
