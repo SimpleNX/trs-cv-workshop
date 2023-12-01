@@ -212,7 +212,26 @@ Session 1:
                         
                 Open Path-Detection-Algorithm
 
-             
+Session 2:
+    Greedy Algorithm :
+        It is an approach to select the most appropriate option depending on the current requirement.
+        It selects the best answer to the sub problems, so it may not result in the overall best or optimal solution.
+    
+    Dijkstra's Algorithm :
+        "Shortest Path" in a weighted graph.
+        It stores the shortest distance from the startting point to every other node and stores them in an array containing all the distances in order.
+        Maintain an Adjacency Matrix with two sets,
+            One set contains vertices that are included in the shortest path tree.
+            The other set contains vertices that are not included.
+            At every step, it checks for the vertices in the second set, if there exists a vertex which has minimum distance from the tree root.
+
+    A* Algorithm:
+        The Dijkstra's Algorithm is inefficient in large datasets, because in worst case scenarios it will traverse all or most of the nodes.
+        So, A* algorithm makes the best choice at every step and overall picks the shortest distance.
+        It contains a heuristic function:
+            The function depicts or results gives how close/near the node is to the goal node or the start node.
+            In all cases, the exact distances cannot be calculated but is approximated and the approximate distance is returned.
+            Path Length + Destnation Heuristic is being minimised
 
                 
 
