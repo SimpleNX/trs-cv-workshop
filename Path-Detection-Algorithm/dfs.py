@@ -1,6 +1,5 @@
 #Depth-First Search
-#Works partially
-#The commented code prints and takes the nodes twice.
+#Works
 graph = {
     'A' : ['B','D'],
     'B' : ['A','C'],
@@ -13,24 +12,23 @@ graph = {
 }
 
 visited =[]
-stack = ['A']
-
-#The following code does not account for parents more than once but moves through all the child
+stack = []
 
 def dfs(node):
-    visited.append(node)
-    stack.append(node)
+    if node not in visited :
+        visited.append(node)
+        stack.append(node)
 
     while stack:
         parent = stack.pop()
-        #stack.append(parent)
+        stack.append(parent)
         for child in graph[parent]:
             if child not in visited:
                 visited.append(child)
                 stack.append(child)
                 print(stack)
                 return dfs(child)
-        #stack.pop()
+        stack.pop()
         print(parent)
 
 print("The DFS Algoritm is :")
