@@ -213,6 +213,7 @@ Session 1:
                 Open Path-Detection-Algorithm
 
 Session 2:
+
     Greedy Algorithm :
         It is an approach to select the most appropriate option depending on the current requirement.
         It selects the best answer to the sub problems, so it may not result in the overall best or optimal solution.
