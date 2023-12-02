@@ -213,17 +213,19 @@ Session 1:
                 Open Path-Detection-Algorithm
 
 Session 2:
+
     Greedy Algorithm :
         It is an approach to select the most appropriate option depending on the current requirement.
         It selects the best answer to the sub problems, so it may not result in the overall best or optimal solution.
     
     Dijkstra's Algorithm :
         "Shortest Path" in a weighted graph.
-        It stores the shortest distance from the startting point to every other node and stores them in an array containing all the distances in order.
+        It stores the shortest distance from the starting point to every other node and stores them in an array containing all the distances in order.
         Maintain an Adjacency Matrix with two sets,
             One set contains vertices that are included in the shortest path tree.
             The other set contains vertices that are not included.
             At every step, it checks for the vertices in the second set, if there exists a vertex which has minimum distance from the tree root.
+        This algorithm works by storing minimun distances from the source and moves by successively storing minimum distance paths from source to goal.
 
     A* Algorithm:
         The Dijkstra's Algorithm is inefficient in large datasets, because in worst case scenarios it will traverse all or most of the nodes.
@@ -231,9 +233,39 @@ Session 2:
         It contains a heuristic function:
             The function depicts or results gives how close/near the node is to the goal node or the start node.
             In all cases, the exact distances cannot be calculated but is approximated and the approximate distance is returned.
-            Path Length + Destnation Heuristic is being minimised
+            Path Length + Destnation Heuristic is being minimised.
+        
 
-                
+Day 6 :
+
+Session 1:
+
+    A* checks the heuristic and cost function for every pixel which would cause more data to be stored and checked and would increase the time required to find the required path.
+    A Quicker algorithm would sample the points around it and then connect as many points required to create the shortest path and this way we create a smaller path and requires lesser computational time.
+    Probablisitic Roadmap :
+        A way of sampling points, there can be different sampling functions, one way is to use the random function, which assigns same probability to every point implying a uniform sampling.
+        Confiuration Space is the transformation of the physical path of the bot into a 2D space where the bot is treated as a point and it has the space where the bot can move and the obstacles are grown to the size of the bot.
+        Free space is the space where the bot can move and does not have the obstacle
+        Free path is the path which the bot can follow and is obstrcuted by any obstacles.
+    Way of Sampling :
+        Uniform sampling samples every point with equal probability but in worst case scenarios where majority of points lie in a free space where the point being sampled in the free space has more probability than one being sampled near obstacles.
+    PRM Planner :
+        1. Probablistic Roadmap Path Planning(columbia.edu) (Sampling points and making edges.)
+        2. Finding a path : Using Dijkstra's.
+         Joining two points by small incremental values, by binary search decomposition.
+    RRT :
+        The search algos are fed with graphs and they search the path.
+        PRM generates a graph.
+        RRT does both of the tasks.
+        We start from the source and sample points and then extend towards(a tree) the sampled point from nearest previously sampled point. And this is to be done until we reach near the goal, and find a path which might not be the most optimal.
+        As iit looks for the nearest neighbour, a lot of perpendicular paths can be seen on the generated map.
+        It uses uniform sampling so the tree is symmetrical.
+        To gain the optimality:
+    RRT*:
+        It's more optimal than RRT.
+        At very new node which is created, it is not connected to the nearest node, rather it checks for the most optimal parent node to join it to to minimize the total cost/distance function.
+        This is checked in the circle we check the parent node in, and in the same circle we also check the other neighbour nodes and rewire them also if it results in minimisation of the overall cost function, overall creating a more optimal solution.
+    Implement RRT* with a real-life map.
 
 
 
