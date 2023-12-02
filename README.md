@@ -267,6 +267,18 @@ Session 1:
         This is checked in the circle we check the parent node in, and in the same circle we also check the other neighbour nodes and rewire them also if it results in minimisation of the overall cost function, overall creating a more optimal solution.
     Implement RRT* with a real-life map.
 
+Session 2:
+
+    RANSAC :
+        This algorithm is used to estimate parameters of a model in an image.
+        The algorithm iteratively chooses a minimal subset of data and tries to make a consensus between them and then chooses multiple subsets and tries to fit best possible subset for the problem, where that subset is in consensus with the best solution to that problem.
+        Step 1:
+            Finding all possible set of data/coordinate combination and draw lines for all data sets and set thresholds and then find the inliers for every set of coordinates.
+            Now check for which line has the most number of inliers.
+        Step 2:
+            The line with the most number of inliers, discard all the outliers and then the best fit line with these inliers is the required line.
+        
+
 
 
         
