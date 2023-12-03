@@ -10,10 +10,10 @@ mean = np.array([250,250])#Mean
 
 coordinate = []#It stores the coordinates of the white pixel.
 inliers = []#The number of inliers for the random two points.
-in_count = 0
-maxinliers = []
-maxin_count = 0
-threshold = 25
+in_count = 0#Number of inliers for a given set of points
+maxinliers = []#List of coordinates that are inliers for the data set with maximum inliers.
+maxin_count = 0#The count of max inliers
+threshold = 10#Threshold distance from the line to consider for inliers.
 
 
 #Genearation of gaussian distribution similiarity between the points
@@ -43,6 +43,20 @@ def disline (a, b, pt):
     distance = num/den if distance !=0 else 0
     return distance
 
+#Finding and counting the number of inliers for the current data set.
+def inliers(a,b):
+    in_count = 0
+    inliers = [a, b]
+    for pt in coordinate:
+        dis = disline(a,b,pt)
+        if dis == threshold:
+            in_count += 1
+            inliers.append(pt)
+        else : 
+            continue
+    return in_count, inliers
+
+
 #Finding the best fitting line for the set of points.
 def least_squared_fit(x, y):
     N = len(x)
@@ -63,6 +77,20 @@ for i in range(set):
     #The random two points
     a = coordinates[a_index]
     b = coordinates[b_index]
-    
+
+    count, inliers = inliers(a,b)
+
+    if(count>maxin_count):
+        maxin_count = count
+        maxinliers = inliers
+
+#Marking the inlier points with blue.
+for point in maxinliers:
+    cv.circle(image, point, 1, (255,0,0), -1)
+
+#Making the best fit line for the given inliers.
+m, b = least_squared_fit(maxinliers[0:][0:1], maxinliers[0:][1:2])
+
+
 
 

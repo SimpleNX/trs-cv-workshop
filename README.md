@@ -278,7 +278,18 @@ Session 2:
         Step 2:
             The line with the most number of inliers, discard all the outliers and then the best fit line with these inliers is the required line.
         
+Day 7:
 
+Session 1:
 
-
+    Advancements in CV:
+        Deep Learning, Neural Networks
+        Image Segmentation, same as idnetifying diffrent set of objects.
+    Convolution : 3Blue1Brown
+    Neural Networks :   Convolutional Neural Networks(CNNs)
+    Transfer Learning
+    ArUco Markers : OpenCV Detection of ArUco Markers
+    SLAM
+    Music Genre Classification using NNs and Spectrograms.
+    
         
