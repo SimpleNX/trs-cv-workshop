@@ -19,9 +19,9 @@ para.filterByArea = True
 
 detector = cv.SimpleBlobDetector_create(para)
 
-keypoint = detector.detect(image)
+keypoint = detector.detect(img)
 
-image_with_keypoint = cv.drawKeyPoints(image, keypoint, np.array([]), (255,0,0), cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+image_with_keypoint = cv.drawKeypoints(img, keypoint, np.array([]), (255,0,0), cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
 
 cv.imshow("image", image_with_keypoint)
 cv.waitKey(0)
