@@ -7,7 +7,7 @@ while True:
     _,img = vid.read()#Reading frame by frame images from the video
     img_gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)#Converting the image to grayscale to work for contour.
 #Detecting the edges via canny detection.
-    canny=cv.Canny(img_gray, 200, 300)
+    canny=cv.Canny(img_gray, 250, 350)
 #Unpacking the contours
     contours, heirarchy = cv.findContours(canny, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
 #Drawing the contours on the image.
