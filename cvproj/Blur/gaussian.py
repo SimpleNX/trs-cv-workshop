@@ -1,12 +1,11 @@
 # Importing the OpenCV, Numpy and Matplotlib libraries
 #Works
 import cv2 
-import numpy as np 
-import matplotlib.pyplot as plt 
+import numpy as np
 
 # Reading the image from the disk using cv2.imread() function 
 # Showing the original image using matplotlib library function plt.imshow() 
-img = cv2.imread('image.jpg') 
+img = cv2.imread('geeksforgeeks.png')
 cv2.imshow('image', img) 
 
 '''Its a 2D convolution operator which is used to remove detail and noise but it uses a different kernel which the Gaussian bell hump '''
